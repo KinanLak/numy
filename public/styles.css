@@ -487,7 +487,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 0.75rem;
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(248 233 161 / var(--tw-border-opacity));
+  border-color: rgb(234 179 8 / var(--tw-border-opacity));
   padding: 0.25rem;
   padding-top: 0px;
   padding-bottom: 0px;
@@ -501,16 +501,83 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bouton-page:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(248 233 161 / var(--tw-bg-opacity));
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(36 48 94 / var(--tw-text-opacity))
 }
 
-.prod-pic {
+.image-product-container {
+  position: relative;
+  display: flex;
   height: 100%;
-  width: 25%;
-  -o-object-fit: cover;
-     object-fit: cover
+  width: 18rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.image-product-pic {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  background-size: cover;
+  background-position: center;
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.image-product-pic:hover {
+  --tw-scale-x: 1.5;
+  --tw-scale-y: 1.5;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
+.image-product-eye {
+  position: absolute;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  font-size: 1.875rem;
+  font-weight: 900;
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+  opacity: 0.6;
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.group:hover .image-product-eye {
+  --tw-scale-x: .75;
+  --tw-scale-y: .75;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
+.product {
+  display: flex;
+  height: 7rem;
+  width: 83.333333%;
+  flex-direction: row;
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms
+}
+
+.product:hover {
+  --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
 }
 
 .mx-2 {
@@ -528,10 +595,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: fit-content
 }
 
-.h-28 {
-  height: 7rem
-}
-
 .h-1\/4 {
   height: 25%
 }
@@ -542,10 +605,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-full {
   height: 100%
-}
-
-.w-5\/6 {
-  width: 83.333333%
 }
 
 .w-1\/3 {
@@ -582,6 +641,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-evenly {
   justify-content: space-evenly
+}
+
+.justify-items-stretch {
+  justify-items: stretch
 }
 
 .space-x-3 > :not([hidden]) ~ :not([hidden]) {
@@ -627,6 +690,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+}
+
+.bg-tmpl {
+  background-image: url(https://picsum.photos/1200)
 }
 
 .bg-contain {
@@ -679,10 +746,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1rem
 }
 
-.text-sm {
-  font-size: .875rem
-}
-
 .text-2xs {
   font-size: .625rem
 }
@@ -691,9 +754,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 700
 }
 
-.text-myellow {
+.text-morange {
   --tw-text-opacity: 1;
-  color: rgb(248 233 161 / var(--tw-text-opacity))
+  color: rgb(234 179 8 / var(--tw-text-opacity))
 }
 
 .text-mblue {
@@ -704,12 +767,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity))
-}
-
-.shadow-2xl {
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
 }
 
 .transition-all {
@@ -737,10 +794,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .group:hover .group-hover\:w-full {
   width: 100%
-}
-
-.group:hover .group-hover\:rounded-full {
-  border-radius: 9999px
 }
 
 .group:hover .group-hover\:underline {

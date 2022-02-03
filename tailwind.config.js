@@ -24,8 +24,12 @@ module.exports = {
       title: ['Slab', 'serif']
     },
     extend: {
+      backgroundImage: {
+        tmpl: 'url(https://picsum.photos/1200)'
+      },
       colors: {
         'myellow': '#F8E9A1',
+        'morange':'#eab308',
         'mred': '#F76C6C',
         'mlightblue': '#A8D0E6',
         'mblue': '#374785',
