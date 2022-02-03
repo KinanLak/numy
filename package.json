@@ -1,0 +1,23 @@
+{
+  "name": "numy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/tailwind.css -o ./public/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KinanLak/numy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KinanLak/numy/issues"
+  },
+  "homepage": "https://github.com/KinanLak/numy#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.18"
+  }
+}

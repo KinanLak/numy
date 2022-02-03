@@ -1,0 +1,30 @@
+/* Tile font */
+@font-face {
+    font-family: 'Slab';
+    src: url('../fonts/RobotoSlab-VariableFont_wght.ttf')
+}
+/* Body font */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf')
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .bouton-page {
+        @apply transition duration-300 ease-in-out border-myellow p-1 w-20 py-0 border rounded-xl text-sm hover:bg-myellow hover:text-mdarkblue;
+    }
+
+    .svg-icon {
+        width: 1em;
+        height: 1em;
+    }
+
+    .prod-pic {
+        @apply h-full object-cover w-3/12
+    }
+
+}
