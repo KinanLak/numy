@@ -1,12 +1,12 @@
 /* Tile font */
 @font-face {
     font-family: 'Slab';
-    src: url('../fonts/RobotoSlab-VariableFont_wght.ttf')
+    src: url('assets/fonts/RobotoSlab-VariableFont_wght.ttf')
 }
 /* Body font */
 @font-face {
     font-family: 'Roboto';
-    src: url('../fonts/Roboto-Regular.ttf')
+    src: url('assets/fonts/Roboto-Regular.ttf')
 }
 
 @tailwind base;
@@ -14,8 +14,23 @@
 @tailwind utilities;
 
 @layer components {
+
+    @keyframes anim-bouton {
+        from {text-underline-offset: 6px;}
+        to {text-underline-offset: 1px;}
+    }
+
+
     .bouton-page {
-        @apply transition duration-300 ease-in-out border-morange p-1 w-20 py-0 border rounded-xl text-sm hover:bg-morange hover:text-mdarkblue;
+        @apply transition duration-300 ease-in-out p-1 w-16 py-0 rounded-sm text-sm hover:bg-mverdydarkblue;
+        
+    }
+
+    .animation-underline:hover {
+        text-decoration: underline;
+        text-underline-offset: 1px;
+        animation-name: anim-bouton;
+        animation-duration: 300ms;
     }
 
     .svg-icon {
@@ -23,20 +38,31 @@
         height: 1em;
     }
 
-    .image-product-container {
-        @apply relative flex items-center justify-center overflow-hidden shadow-xl w-72 h-full rounded-r-xl
-    }
-    
-    .image-product-pic {
-        @apply absolute w-full h-full transition-all duration-500 ease-in-out transform bg-center bg-cover hover:scale-150
+    .product {
+        @apply transition-all duration-300 hover:shadow-black hover:shadow-lg flex flex-row w-5/6 h-28 shadow-2xl bg-transparent overflow-hidden rounded-xl
     }
 
-    .image-product-eye {
-        @apply absolute text-3xl font-black transition-all duration-500 ease-in-out transform scale-100 text-red-500 opacity-60 group-hover:scale-75
+    .image-product-container {
+        @apply flex items-center justify-center w-72 h-28 bg-cover hover:cursor-pointer
     }
     
-    .product {
-        @apply transition-all duration-300 drop-shadow hover:drop-shadow-2xl flex flex-row w-5/6 h-28 shadow-2xl
+    .image-product-eye {
+        @apply text-xl font-black transition-all duration-200 ease-in-out transform text-red-500 opacity-75 h-full w-full group-hover:scale-125
+    }
+    
+    body {
+        overscroll-behavior:none;
+    }
+
+    html {
+        zoom: 250%
+    }
+
+    hr {
+        width: 1px; 
+        height: 1rem;
+        border:none;
+        border-left: 1px solid #eab308;
     }
 
 }
