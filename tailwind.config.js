@@ -25,7 +25,11 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        tmpl: 'url(https://picsum.photos/1200)'
+        tmpl: 'url(https://picsum.photos/1200)',
+        thumb1: 'url(./assets/img/thumbnails/1.jpg)',
+        thumb2: 'url(./assets/img/thumbnails/2.jpg)',
+        thumb3: 'url(./assets/img/thumbnails/3.jpg)',
+        thumb4: 'url(./assets/img/thumbnails/4.jpg)',
       },
       colors: {
         'myellow': '#F8E9A1',
@@ -33,7 +37,11 @@ module.exports = {
         'mred': '#F76C6C',
         'mlightblue': '#A8D0E6',
         'mblue': '#374785',
-        'mdarkblue': '#24305E'
+        'mdarkblue': '#24305E',
+        'mverdydarkblue': '#1f284f',
+      },
+      screens: {
+        'mini':'0px'
       },
     },
   },
