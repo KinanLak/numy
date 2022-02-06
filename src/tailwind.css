@@ -16,13 +16,13 @@
 @layer components {
 
     @keyframes anim-bouton {
-        from {text-underline-offset: 6px;}
+        from {text-underline-offset: 16px;}
         to {text-underline-offset: 1px;}
     }
 
 
     .bouton-page {
-        @apply transition duration-300 ease-in-out p-1 w-16 py-0 rounded-sm text-sm hover:bg-mverdydarkblue;
+        @apply transition duration-300 ease-in-out p-2 w-44 py-0 text-4xl rounded-md hover:bg-mverdydarkblue 
         
     }
 
@@ -39,30 +39,27 @@
     }
 
     .product {
-        @apply transition-all duration-300 hover:shadow-black hover:shadow-lg flex flex-row w-5/6 h-28 shadow-2xl bg-transparent overflow-hidden rounded-xl
+        @apply transition-all duration-300 shadow-black shadow-md hover:shadow-black hover:shadow-xl flex flex-row w-5/6 h-72 bg-transparent overflow-hidden rounded-3xl
     }
 
     .image-product-container {
-        @apply flex items-center justify-center w-72 h-28 bg-cover hover:cursor-pointer
+        @apply flex items-center justify-center w-1/5 h-full bg-cover hover:cursor-pointer
     }
     
     .image-product-eye {
-        @apply text-xl font-black transition-all duration-200 ease-in-out transform text-red-500 opacity-75 h-full w-full group-hover:scale-125
+        @apply font-black transition-all duration-200 ease-in-out transform text-red-500 opacity-75 h-full w-full group-hover:scale-125
     }
     
     body {
         overscroll-behavior:none;
     }
 
-    html {
-        zoom: 250%
-    }
 
     hr {
         width: 1px; 
-        height: 1rem;
+        height: 3rem;
         border:none;
-        border-left: 1px solid #eab308;
+        border-left: 2px solid #eab308;
     }
 
 }
