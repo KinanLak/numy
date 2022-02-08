@@ -1,6 +1,6 @@
 module.exports = {
   mode: 'jit',
-  content: ['./public/*.html'],
+  content: ['./public/pages/*.html'],
   theme: {
     fontSize: {
       '5xs': '.25rem',
@@ -49,7 +49,8 @@ module.exports = {
       },
       colors: {
         'myellow': '#F8E9A1',
-        'morange':'#eab308',
+        'mlightorange':'#eab308',
+        'morange': '#EE962B',
         'mred': '#F76C6C',
         'mlightblue': '#A8D0E6',
         'mblue': '#374785',
