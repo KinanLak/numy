@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Contact - Numy Code</title>
+</head>
+
+<body class="preload">
+    <div class="flex flex-col justify-between items-center w-screen h-screen ">
+        <div class="fixed w-full left-0 top-0 z-50 shadow-black shadow-sm">
+            <div class="flex flex-row text-morange bg-mdarkblue justify-between items-center overflow-x-auto bg-opacity-[.98]">
+                <a href="products_list.html" class="font-title text-5xl text-left transition duration-300 rounded-lg my-2 px-2 p-0 w-fit hover:bg-mverdydarkblue">Numy Code.</a>
+                <div class="flex flex-row text-mlightorange font-sans  items-center md:space-x-4 font-bold p-1 ">
+                    <a href="./confirmation.html" class="bouton-page hover:animation-underline">Produits</a>
+                    <hr>
+                    <a href="./blog.html" class="bouton-page rounded-md hover:animation-underline">Blog</a>
+                    <hr>
+                    <a href="./contact.html" class="bouton-page rounded-md hover:animation-underline">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-48 md:mt-0 flex flex-col justify-between overflow-x-hidden w-full h-full z-10 ">
+            <div class="flex flex-col justify-center items-center w-full md:pt-28 pb-12">
+                <div class="text-3xl p-4 text-center ">Vous souhaitez nous contacter ?</div>
+                <form id="contact-form" action="send" method="post" enctype = "multipart/form-data" 
+                    class="flex flex-col justify-start items-center border-2 border-mlightorange rounded-3xl p-8 h-min sm:4/5 md:w-1/3 gap-y-4">
+
+                    <div class="quest-container">
+                        <div required class="quest-label required">Entrez votre nom</div>
+                        <input required name="name" class="quest-input" type="text" placeholder="Nathan Malpeyre">
+                    </div>
+                    <div class="quest-container">
+                        <div class="quest-label required">Entrez votre adresse mail</div>
+                        <input required name="email" class="quest-input" type="email" placeholder="mail@exemple.com">
+                    </div>
+                    <div class="quest-container">
+                        <div class="quest-label required">Entrez le sujet de votre message</div>
+                        <input required name="subject" class="quest-input" type="text" placeholder="J'ai un problème avec, je voudrai parler de...">
+                    </div>
+                    <div class="quest-container">
+                        <div class="quest-label required pb-2">Entrez votre message</div>
+                        <textarea required name="message" class="jsresize min-h-[10rem] resize-y w-full border-2 border-gray-400 outline-none
+                        rounded-lg p-2 placeholder:opacity-50 transition-all duration-1000" type="text" placeholder="Décrivez ici votre problème, n'hésitez pas à préciser des informations comme la date, le produit, le moyen de paiement, etc."></textarea>
+                    </div>
+
+                    <button value="submit" type="submit" src="./main.html" class="mt-8 flex flex-row justify-center items-center transition-all 
+                        duration-500 cursor-pointer bg-gradient-to-l from-mblue to-mdarkblue rounded-3xl hover:rounded-[40px] gap-2 w-fit h-16 px-6 group">
+                        <div class=" text-center text-white h-max w-4/5 group-hover:animation-underline text-3xl">Envoyer</div>
+                        <img src="../assets/svg/r-arrow.svg" class="h-full w-1/5 black-to-white group-hover:animation_swipe_right" alt="Retourner accueil">
+                    </button>
+                </form>
+            </div>
+
+            <div>
+                <div class="flex w-full flex-row justify-center gap-20 items-center h-min py-8 bg-slate-600 text-white overflow-auto flex-wrap">
+                    <div class="flex flex-row justify-center items-center">
+                        <hr class="">
+                        <div class="ml-2 text-lg font-bold">
+                            <div>12 rue de la vie</div>
+                            <div>75015 Paris</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 justify-center items-center flex-wrap px-4">
+                        <img class="w-25 h-24 rounded-md" src="https://picsum.photos/1024">
+                        <div class="text-5xl text-morange font-title">Numy Code.</div>
+                    </div>
+                    <a href="contact.html" class="transition-all duration-300 border rounded-2xl p-3 font-bold text-lg
+                    drop border-white hover:bg-white hover:text-slate-600 hover:rounded-3xl">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script src="../modules/autosize.js"></script>
+<script src="../script.js"></script>
+
+</html>

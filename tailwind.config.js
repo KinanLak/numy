@@ -1,6 +1,6 @@
 module.exports = {
   mode: 'jit',
-  content: ['./public/pages/*.html'],
+  content: ['./public/static/pages/*.html'],
   theme: {
     fontSize: {
       '5xs': '.25rem',

@@ -29,7 +29,6 @@
     .animation_swipe_right {
         animation-name: anim_fleche;
         animation-duration: 3s;
-        animation-delay: 2s;
         animation-timing-function: cubic-bezier(.07,1.13,.6,.9);
         animation-iteration-count: infinite;
     }
@@ -78,5 +77,56 @@
 
     .black-to-white {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(5deg) brightness(102%) contrast(102%);
+    }
+
+    .quest-container { 
+        @apply h-fit w-5/6
+    }
+
+    .quest-label {
+        @apply text-xl w-full
+    }
+
+    .quest-input {
+        @apply border-b-2 outline-none w-full focus:border-b-blue-700 transition-all duration-1000 placeholder:opacity-50
+    }
+
+    .quest-input:valid { 
+        @apply border-b-blue-700
+    }
+
+    .quest-input:invalid { 
+        @apply border-b-red-500
+    }
+
+    textarea:valid {
+        @apply border-blue-700 
+    }
+
+    textarea:invalid {
+        @apply border-red-500 border-2
+    }
+
+    .required:after {
+        content:" *";
+        color: red;
+        @apply text-sm
+  }
+
+    div::-webkit-scrollbar { 
+        background-color: transparent;
+        width: 8px;
+    }
+
+    div::-webkit-scrollbar-thumb {
+        background-color: lightgrey;
+        border-radius: 50px;
+    }
+
+    .preload * {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -ms-transition: none !important;
+        -o-transition: none !important;
     }
 }
