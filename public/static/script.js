@@ -14,3 +14,14 @@ const formEvent = form.addEventListener("submit", (event) => {
 
     sendMail(mail);
 })
+
+const sendMail = (mail) => {
+
+    fetch("https://numy-code.herokuapp.com/send", {
+        method: "post",
+        body: mail,
+
+    }).then((response) => {
+        return response.json();
+    });
+};
