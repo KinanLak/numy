@@ -1,6 +1,6 @@
 module.exports = {
   mode: 'jit',
-  content: ['./public/static/pages/*.html'],
+  content: ['./public/pages/*.html'],
   theme: {
     fontSize: {
       '5xs': '.25rem',
@@ -18,22 +18,6 @@ module.exports = {
       '5xl': '3rem',
       '6xl': '4rem',
       '7xl': '5rem',
-
-      // '5xs': '.625rem',
-      // '4xs': '.9375rem',
-      // '3xs': '1.25rem',
-      // '2xs': '1.5625rem',
-      // 'xs': '1.875rem',
-      // 'sm': '2.1875rem',
-      // 'base': '2.5rem',
-      // 'lg': '2.8125rem',
-      // 'xl': '3.125rem',
-      // '2xl': '3.75rem',
-      // '3xl': '4,6875rem',
-      // '4xl': '5.625rem',
-      // '5xl': '7.5rem',
-      // '6xl': '10rem',
-      // '7xl': '12.5rem',
     },
     fontFamily: {
       sans: ['Roboto', 'sans-serif'],

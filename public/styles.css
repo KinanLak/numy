@@ -795,14 +795,6 @@ div::-webkit-scrollbar-thumb {
   display: flex
 }
 
-.table {
-  display: table
-}
-
-.hidden {
-  display: none
-}
-
 .h-screen {
   height: 100vh
 }
@@ -851,6 +843,18 @@ div::-webkit-scrollbar-thumb {
 
 .h-32 {
   height: 8rem
+}
+
+.max-h-\[60rem\] {
+  max-height: 60rem
+}
+
+.max-h-\[30rem\] {
+  max-height: 30rem
+}
+
+.max-h-\[40rem\] {
+  max-height: 40rem
 }
 
 .max-h-\[35rem\] {

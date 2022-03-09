@@ -27,8 +27,12 @@
         <div class="mt-48 md:mt-0 flex flex-col justify-between overflow-x-hidden w-full h-full z-10 ">
             <div class="flex flex-col justify-center items-center w-full md:pt-28 pb-12">
                 <div class="text-3xl p-4 text-center ">Vous souhaitez nous contacter ?</div>
-                <form id="contact-form" action="send" method="post" enctype="multipart/form-data" class="flex flex-col justify-start items-center border-2 border-mlightorange rounded-3xl p-8 h-min sm:4/5 md:w-1/3 gap-y-4">
-
+                <form id="contact-form" action="https://formsubmit.co/95e8265170dd2945fd1bc5e6301a8742" method="POST" class="flex flex-col justify-start items-center border-2 border-mlightorange rounded-3xl p-8 h-min sm:4/5 md:w-1/3 gap-y-4">
+                    <input type="hidden" name="_subject" value="[Numy Code] Nouveau message reçu.">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_autoresponse" value="Votre demande a bien été reçue.">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_next" value="http://localhost:3000/public/pages/confirmation-contact.html">
                     <div class="quest-container">
                         <div required class="quest-label required">Entrez votre nom</div>
                         <input required name="name" class="quest-input" type="text" placeholder="Nathan Malpeyre">
@@ -39,13 +43,15 @@
                     </div>
                     <div class="quest-container">
                         <div class="quest-label required">Entrez le sujet de votre message</div>
-                        <input required name="subject" class="quest-input" type="text" placeholder="J'ai un problème avec, je voudrai parler de...">
+                        <input required name="subject" class="quest-input" type="text" placeholder="J'ai un problème avec, je voudrais parler de...">
                     </div>
                     <div class="quest-container">
                         <div class="quest-label required pb-2">Entrez votre message</div>
-                        <textarea required name="message" class="jsresize min-h-[10rem] resize-y w-full border-2 border-gray-400 outline-none
+                        <textarea required name="message" class="jsresize min-h-[10rem] max-h-[35rem] resize-y w-full border-2 border-gray-400 outline-none
                         rounded-lg p-2 placeholder:opacity-50 transition-all duration-1000" type="text" placeholder="Décrivez ici votre problème, n'hésitez pas à préciser des informations comme la date, le produit, le moyen de paiement, etc."></textarea>
                     </div>
+
+                    <input required type="hidden" id="recaptchaResponse" name="recaptcha-response">
 
                     <button value="submit" type="submit" src="./main.html" class="mt-8 flex flex-row justify-center items-center transition-all 
                         duration-500 cursor-pointer bg-gradient-to-l from-mblue to-mdarkblue rounded-3xl hover:rounded-[40px] gap-2 w-fit h-16 px-6 group">

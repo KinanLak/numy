@@ -55,7 +55,7 @@
     }
 
     .image-product-container {
-        @apply transition-all duration-[1200ms] ease-in-out flex items-center justify-center w-1/5 h-full bg-cover hover:cursor-pointer hover:scale-150
+        @apply transition-all duration-[1200ms] ease-in-out flex items-center justify-center w-1/5 h-full bg-cover hover:cursor-pointer hover:scale-110
     }
     
     .image-product-eye {
