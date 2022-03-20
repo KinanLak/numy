@@ -34,7 +34,7 @@
     }
 
     .bouton-page {
-        @apply transition duration-300 ease-in-out p-2 sm:w-[125%] md:w-44 py-0 text-4xl rounded-md hover:bg-mverdydarkblue text-center hover:cursor-pointer
+        @apply transition duration-300 ease-in-out p-2 sm:w-[125%] md:w-44 py-0 text-4xl rounded-md hover:bg-mverdydarkblue text-center hover:cursor-pointer font-bold
         
     }
 

@@ -548,6 +548,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0px;
   text-align: center;
   font-size: 2.25rem;
+  font-weight: 700;
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
@@ -853,6 +854,10 @@ div::-webkit-scrollbar-thumb {
   height: 8rem
 }
 
+.h-1 {
+  height: 0.25rem
+}
+
 .max-h-\[35rem\] {
   max-height: 35rem
 }
@@ -889,6 +894,10 @@ div::-webkit-scrollbar-thumb {
 
 .w-full {
   width: 100%
+}
+
+.w-1\/2 {
+  width: 50%
 }
 
 .w-72 {
@@ -937,6 +946,10 @@ div::-webkit-scrollbar-thumb {
 
 .justify-between {
   justify-content: space-between
+}
+
+.justify-around {
+  justify-content: space-around
 }
 
 .justify-evenly {
